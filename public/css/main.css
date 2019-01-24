@@ -1,0 +1,72 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+     supported by Chrome and Opera */
+
+     --width: 450px;
+     --grey: rgb(160, 160, 160);
+     --black: black;
+     --white: white;
+     --offwhite: rgb(245, 245, 245);
+     --blue: hsl(202, 50%, 63%);
+     --darkblue: hsl(229, 100%, 61%);
+}
+
+.fullscreen {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+hidden {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+#app {
+    margin: auto;
+    background-color: var(--white);
+    width: 100%;
+    max-width: var(--width);
+    box-shadow: 0 0 20px var(--grey);
+}
+
+#loading {
+    position: absolute;
+}
+
+#spinner {
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: 0 0 40px var(--grey);
+}
+
+.start-menu {
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.start-menu-input {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    color: var(--grey);
+}
+
+input.selected {
+    border: solid 1px var(--grey);
+}

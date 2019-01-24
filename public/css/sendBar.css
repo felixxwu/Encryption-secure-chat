@@ -1,0 +1,29 @@
+.send, .showKeyboard {
+    color: var(--darkblue);
+    cursor: pointer;
+    padding: 10px;
+    padding-top: 12px;
+}
+
+.sendBar {
+    max-width: var(--width);
+    box-shadow: 0 0 3px var(--grey);
+    display: grid;
+    grid-template-columns: auto 50px;
+    width: 100%;
+    max-width: var(--width);
+}
+
+.sendBar > textarea {
+    background-color: var(--offwhite);
+    border-radius: 15px;
+    border: none;
+    padding: 8px;
+    padding-left: 10px;
+    margin: 10px;
+    margin-right: 0;
+}
+
+textarea:focus {
+    outline: 0;
+}

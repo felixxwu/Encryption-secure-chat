@@ -1,0 +1,52 @@
+.keyboard {
+    max-width: var(--width);
+}
+
+.row1, .row2, .row3, .spaceRow {
+    display: grid;
+    text-align: center;
+    color: var(--black);
+}
+
+.spaceRow {
+    grid-template-columns: auto 1fr auto;
+}
+
+.row1 {
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.row2 {
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.row3 {
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.key, .spaceRowKey {
+    height: 50px;
+}
+
+.key > * > i {
+    padding-top: 4px;
+    font-size: medium;
+}
+
+.key:active, .space:active {
+    background-color: var(--offwhite);
+    box-shadow: 0 5px 20px var(--grey);
+    border-radius: 5px;
+}
+
+.bottomLeft, .bottomRight {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.space {
+    width: 50vw;
+    max-width: calc(var(--width) / 2);
+    padding: 10px;
+    background-color: var(--offwhite);
+}

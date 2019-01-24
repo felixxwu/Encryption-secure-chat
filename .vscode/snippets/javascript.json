@@ -1,0 +1,131 @@
+{
+	"React Component": {
+		"prefix": "react",
+		"body": [
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} extends React.Component {",
+			"\tconstructor (props) {",
+			"\t\tsuper(props);",
+			"\t\tthis.state = {",
+			"\t\t\t$2",
+			"\t\t}",
+			"\t}",
+			"\t",
+			"\trender() {",
+			"\t\t${3:return ;}",
+			"\t}",
+			"}"
+		]
+	},
+	"React Render": {
+		"prefix": "react render",
+		"body": [
+			"ReactDOM.render(e(${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}), document.querySelector('#${2:id}'));"
+		],
+		"description": "Render a react element to the document."
+	},
+	"React e()": {
+		"prefix": "react e()",
+		"body": [
+			"const e = React.createElement;"
+		],
+		"description": "Define e()"
+	},
+	"React Button e('button', {onClick})": {
+		"prefix": "button",
+		"body": [
+			"e(\"button\", {onClick: () => {$1}}, \"${2:button text}\")"
+		]
+	},
+	"React element e(div, null, text)": {
+		"prefix": "element",
+		"body": [
+			"e(${1:\"${2:div}\"}, ${3:null}, ${4:\"${5:text}\"})"
+		]
+	},
+	"React material icon": {
+		"prefix": "material-icon",
+		"body": [
+			"e(\"i\", {className: \"material-icons\"}, \"$1\")"
+		]
+	},
+	"React className": {
+		"prefix": "className",
+		"body": [
+			"{className: \"$1\"}"
+		]
+	},
+
+
+	
+	"Animate.CSS": {
+		"prefix": "animate.css",
+		"body": [
+			"$(\"#${1:id}\").animateCss(\"${2:style}\");"
+		]
+	},
+	"Animate.CSS + Callback": {
+		"prefix": "animate.css + callback",
+		"body": [
+			"$(\"#${1:id}\").animateCss(\"${2:style}\", () => {$3});"
+		]
+	},
+
+
+
+	"jQuery Ajax": {
+		"prefix": "ajax",
+		"body": [
+			"$.ajax({",
+			"\turl: '$1',",
+			"\tdata: {$2}",
+			"})",
+			".done(response => {$3})",
+			".fail(error => ${4:console.log(error)});"
+		]
+	},
+	"jQuery Hide()": {
+		"prefix": "hide",
+		"body": [
+			"$(\"#$1\").hide();"
+		]
+	},
+	"jQuery Show()": {
+		"prefix": "show",
+		"body": [
+			"$(\"#$1\").show();"
+		]
+	},
+
+
+
+	"() => {} ES6 Arrow Function": {
+		"prefix": "arrow",
+		"body": [
+			"${1:($2)} => {$3}"
+		]
+	},
+	"Immediately Invoked Function Expression (IIFE)": {
+		"prefix": "iife",
+		"body": [
+			"(() => {$1})()$2"
+		]
+	},
+	"Simple For": {
+		"prefix": "forSimple",
+		"body": [
+			"for (let ${1:i} = 0; ${1:i} < ${2:size}; ${1:i}++) {",
+			"\t$3",
+			"}"
+		]
+	},
+	"Class": {
+		"prefix": "class",
+		"body": [
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} {",
+			"\tconstructor($2) {",
+			"\t\t$3",
+			"\t}",
+			"}"
+		]
+	}
+}

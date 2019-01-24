@@ -1,0 +1,79 @@
+.title {
+    max-width: var(--width);
+    box-shadow: 0 0 10px var(--grey);
+    background-color: var(--offwhite);
+}
+
+.title > * {
+    padding: 15px;
+}
+
+.messaging {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.chat {
+    max-width: var(--width);
+    padding-bottom: 20px;
+    overflow-y: scroll;
+}
+
+.chat > * {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.chatActions {
+    border-top: 1px solid lightgrey;
+    text-align: center;
+    padding: 20px;
+}
+
+.chatActions > i {
+    padding: 20px;
+    color: var(--grey);
+    cursor: pointer;
+}
+
+.id {
+    display: inline-block;
+    color: var(--blue);
+}
+
+.me {
+    font-weight: bold;
+    color: var(--black);
+}
+
+.time {
+    color: var(--grey);
+    display: inline;
+    font-size: small;
+    padding-left: 5px;
+}
+
+.countdown {
+    color: var(--grey);
+    font-size: small;
+}
+
+.message {
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.message > .material-icons {
+    color: var(--grey);
+}
+
+.messageText {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.myText {
+    background-color: var(--offwhite);
+}
